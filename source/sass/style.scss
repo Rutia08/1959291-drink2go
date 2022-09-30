@@ -3,3 +3,9 @@
 @import "./global/fonts";
 @import "./global/variables";
 @import "./global/mixins";
+
+// блоки
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/map.scss";

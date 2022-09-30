@@ -1,0 +1,17 @@
+.page {
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.page__body {
+  min-width: $mobile-width;
+  margin: 0 auto;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  overflow-x: hidden;
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Интернет-магазин кофейных напитков.</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"/> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
   </head>
@@ -15,9 +17,10 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo-img" src="img/logo-phone.svg" width="32" height="36" alt="Логотип Drink2Go.">
+            <img class="main-header__logo-img" src="img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
           </picture>
         </a>
+        <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
@@ -436,9 +439,8 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта - как нас найти.</h2>
-        <div class="map-wrapper">
-          <iframe class="map__iframe" title="Карта - как нас найти" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b1f01c6ea8b1ae4564d9b259914c86b06adf6747e84dade9cb64aca09c99396&amp;source=constructor" width="100%" height="420"></iframe>
-          <picture>
+        <div class="map__wrapper" id="map-wrapper">
+            <picture class="map__picture">
             <!-- <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x"> -->
             <source type="image/png" media="(min-width: 1440px)"
@@ -552,5 +554,7 @@
         </section>
       </div>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

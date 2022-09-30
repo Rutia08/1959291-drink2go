@@ -1,13 +1,13 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
+// import postcss from 'gulp-postcss';
+// import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 // мои задачи
 import rename from 'gulp-rename';
 import svgstore from 'gulp-svgstore';
-import csso from 'postcss-csso';
+// import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
@@ -19,10 +19,10 @@ const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
   .pipe(plumber())
   .pipe(sass().on('error', sass.logError))
-  .pipe(postcss([
-  autoprefixer(),
-  csso()
-  ]))
+  // .pipe(postcss([
+  // autoprefixer(),
+  // csso()
+  // ]))
   .pipe(rename('style.min.css'))
   .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
   .pipe(browser.stream());
