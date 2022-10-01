@@ -135,7 +135,7 @@ export default gulp.series(
   // html,
   // scripts,
   // svg,
-  // sprite,
+  sprite,
   // webp
   // ),
   // gulp.series(

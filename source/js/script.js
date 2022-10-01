@@ -9,6 +9,21 @@ navToggle.onclick = function() {
   navMain.classList.toggle('main-nav--opened');
 };
 
+// слайдер
+var swiper = new Swiper(".mySwiper", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
 // карта
 mapPicture.classList.add('visually-hidden');
 

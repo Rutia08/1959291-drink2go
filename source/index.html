@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Интернет-магазин кофейных напитков.</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
@@ -61,9 +62,91 @@
     <main class="main-container">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
       <section class="promo">
-        <div class="promo__wrapper">
+        <div class="promo__slider swiper mySwiper">
           <h2 class="visually-hidden">Наши новые предложения.</h2>
-          <ul class="promo__list">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span class ="swiper__slide-number">slide1</span>
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 1440px)"
+                  srcset="img/slider-1-desktop.png 1x, img/slider-1-desktop@2x.png 2x">
+                <!-- <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x">
+                <!-- <source type="image/webp"
+                  srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x"> -->
+                <img class="swiper__picture" width="280" height="280" src="img/slider-1-mobile.png" srcset="img/slider-1-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              </picture>
+              <p class="swiper__text">Новинка!</p>
+              <h2 class="swiper__title">Декаф Флэт Уайт</h2>
+              <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <span class="swiper__old-price">295₽</span>
+              <span class="swiper__new-price">225₽</span>
+              <a class="swiper__button" href="#">Заказать</a>
+            </div>
+            <div class="swiper-slide">
+              <span class ="swiper__slide-number">slide2</span>
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider-2-desktop.webp 1x, img/slider-2-desktop@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 1440px)"
+                  srcset="img/slider-2-desktop.png 1x, img/slider-2-desktop@2x.png 2x">
+                <!-- <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="img/slider-2-tablet.png 1x, img/slider-2-tablet@2x.png 2x">
+                <!-- <source type="image/webp"
+                  srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x"> -->
+                <img class="swiper__picture" width="280" height="280" src="img/slider-2-mobile.png" srcset="img/slider-2-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              </picture>
+              <p class="swiper__text">Новинка!</p>
+              <h2 class="swiper__title">Лавандовый Латте</h2>
+              <p class="swiper__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <span class="swiper__old-price">285₽</span>
+              <span class="swiper__new-price">265₽</span>
+              <a class="swiper__button" href="#">Заказать</a>
+            </div>
+            <div class="swiper-slide">
+              <span class ="swiper__slide-number">slide3</span>
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 1440px)"
+                  srcset="img/slider-3-desktop.png 1x, img/slider-3-desktop@2x.png 2x">
+                <!-- <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x"> -->
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="img/slider-3-tablet.png 1x, img/slider-3-tablet@2x.png 2x">
+                <!-- <source type="image/webp"
+                  srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x"> -->
+                <img class="swiper__picture" width="280" height="280" src="img/slider-3-mobile.png" srcset="img/slider-3-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              </picture>
+              <p class="swiper__text">Новинка!</p>
+              <h2 class="swiper__title">Тройной Эспрессо</h2>
+              <p class="swiper__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <span class="swiper__old-price">395₽</span>
+              <span class="swiper__new-price">375₽</span>
+              <a class="swiper__button" href="#">Заказать</a>
+            </div>
+
+          </div>
+          <div class="swiper-button-next">
+            <svg class="swiper-button-next__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+              <use href="img/sprite.svg#swiper-next"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-prev__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+              <use href="img/sprite.svg#swiper-prev"></use>
+            </svg>
+          </div>
+          <div class="swiper-pagination">
+
+          </div>
+          <!-- <ul class="promo__list">
             <li class="promo__item">
               <p class="promo__text">Новинка!</p>
               <h2 class="promo__title">Декаф Флэт Уайт</h2>
@@ -88,7 +171,7 @@
               <span class="promo__new-price">375₽</span>
               <a class="promo__button" href="form.html">Заказать</a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section>
       <section class="advantages">
@@ -438,7 +521,7 @@
       <section class="map">
         <h2 class="visually-hidden">Карта - как нас найти.</h2>
         <div class="map__wrapper" id="map-wrapper">
-            <picture class="map__picture">
+            <picture>
             <!-- <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x"> -->
             <source type="image/png" media="(min-width: 1440px)"
@@ -552,7 +635,9 @@
         </section>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
+
   </body>
 </html>
