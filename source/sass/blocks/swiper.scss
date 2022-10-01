@@ -1,8 +1,7 @@
 .swiper {
-  width: 320px;
-  height: 616px;
+  width: 280px;
   background-color: #f3ebe1;
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
 
 .swiper__slide-number {
@@ -14,9 +13,59 @@
   text-align: center;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
+.swiper__picture {
+  margin-bottom: 10px;
+}
+
+.swiper__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #7859cf;
+  margin-bottom: 4px;
+}
+
+.swiper__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.swiper__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.swiper__purchase {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper__old-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration-line: line-through;
+  color: #7859cf;
+  margin-right: 6px;
+}
+
+.swiper__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #333333;
+  margin-right: 20px;
+}
+
+.swiper__button {
+  @include button;
+  padding: 8px 20px;
 }
 
 .swiper-button-next {
@@ -46,13 +95,18 @@
 .swiper-button-next,
 .swiper-button-prev {
   width: 20px;
-  height: 656px;
+  height: 100%;
   top: 22px;
 
   &:disabled {
     background: none;
     background-color: #ffffff;
   }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
 
 .swiper-button-prev__icon,
@@ -66,4 +120,20 @@
 
 .swiper-pagination {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
+
+.swiper-pagination-bullet {
+  width: 64px;
+  height: 4px;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #7859cf;
+}
+
