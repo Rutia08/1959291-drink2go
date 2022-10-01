@@ -1,0 +1,42 @@
+.user-list {
+  @include zero-indent;
+  list-style: none;
+  display: flex;
+  margin-right: 60px;
+}
+
+.user-list__item {
+  @include zero-indent;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #f0ebff;
+  }
+
+  &:active {
+    background-color: #f0ebff;
+  }
+}
+
+.user-list__navigation-link {
+  @include zero-indent;
+  display: contents;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f0ebff;
+  }
+
+  &:active {
+    background-color: #f0ebff;
+  }
+}
+
+.user-list__navigation-icon {
+  padding: 22px;
+}
+
+.user-list__navigation-text {
+  display: none;
+}

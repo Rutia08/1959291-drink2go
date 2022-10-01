@@ -4,11 +4,13 @@ let navToggle = document.querySelector('.main-nav__toggle');
 let mapPicture = document.querySelector('.map__picture');
 
 page.classList.remove('nojs');
-mapPicture.classList.add('visually-hidden');
 
 navToggle.onclick = function() {
   navMain.classList.toggle('main-nav--opened');
 };
+
+// карта
+mapPicture.classList.add('visually-hidden');
 
 const map = L.map('map-wrapper')
   .setView({

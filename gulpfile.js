@@ -62,7 +62,6 @@ const copyImages = (done) => {
   done();
 }
 
-
 // оптимизация картинок
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')

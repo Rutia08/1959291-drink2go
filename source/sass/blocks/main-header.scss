@@ -1,12 +1,12 @@
 .main-header {
   position: relative;
-}
-
-.main-header__wrapper {
   margin: 0 auto;
   width: $mobile-width;
   box-sizing: border-box;
-  padding: 20px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -20,6 +20,10 @@
     width: $desktop-width;
     padding: 22px 40px;
   }
+}
+
+.main-header__logo {
+  padding: 0 20px;
 }
 
 .main-header__logo-text {
