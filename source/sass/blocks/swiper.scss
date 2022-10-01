@@ -18,6 +18,7 @@
 }
 
 .swiper__text {
+  @include zero-indent;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -26,6 +27,7 @@
 }
 
 .swiper__title {
+  @include zero-indent;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
@@ -35,10 +37,12 @@
 }
 
 .swiper__description {
+  @include zero-indent;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
+  margin-bottom: 20px;
 }
 
 .swiper__purchase {
@@ -47,6 +51,7 @@
 }
 
 .swiper__old-price {
+  @include zero-indent;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -56,6 +61,7 @@
 }
 
 .swiper__new-price {
+  @include zero-indent;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
