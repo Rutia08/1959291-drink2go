@@ -1,0 +1,20 @@
+.main-footer {
+  margin: 0 auto;
+  width: $mobile-width;
+  background-color: #ffffff;
+}
+
+.main-footer__wrapper {
+  padding: 22px 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 38px;
+}
+
+.main-footer__logo-text {
+  display: none;
+}
+
+.main-footer__copyright {
+  grid-column: 1/3;
+}
