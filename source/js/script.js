@@ -1,12 +1,12 @@
 let page = document.getElementsByTagName('body') [0];
-let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
+let navSite = document.querySelector('.site-nav');
+let navToggle = document.querySelector('.site-nav__toggle');
 let mapPicture = document.querySelector('.map__picture');
 
 page.classList.remove('nojs');
 
 navToggle.onclick = function() {
-  navMain.classList.toggle('main-nav--opened');
+  navSite.classList.toggle('site-nav--opened');
 };
 
 // слайдер

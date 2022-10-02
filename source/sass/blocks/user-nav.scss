@@ -1,14 +1,19 @@
-.user-list {
+.user-nav {
+  margin-right: 60px;
+  grid-column: 2/3;
+  grid-row: 1;
+}
+
+.user-nav__list {
   @include zero-indent;
   list-style: none;
   display: flex;
-  margin-right: 60px;
+  justify-content: flex-end;
 }
 
-.user-list__item {
+.user-nav__item {
   @include zero-indent;
   display: flex;
-  align-items: center;
 
   &:hover {
     background-color: #f0ebff;
@@ -19,7 +24,7 @@
   }
 }
 
-.user-list__navigation-link {
+.user-nav__navigation-link {
   @include zero-indent;
   display: contents;
   text-decoration: none;
@@ -33,10 +38,10 @@
   }
 }
 
-.user-list__navigation-icon {
+.user-nav__navigation-icon {
   padding: 22px;
 }
 
-.user-list__navigation-text {
+.user-nav__navigation-text {
   display: none;
 }

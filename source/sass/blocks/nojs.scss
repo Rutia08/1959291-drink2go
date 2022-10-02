@@ -1,17 +1,11 @@
-.nojs .main-nav__toggle {
+.nojs .site-nav__list {
+  display: flex;
+}
+
+.nojs .site-nav__toggle {
   display: none;
 }
 
-.nojs .main-header {
-  margin-bottom: 227px;
-}
-
-.nojs .site-list {
-  display: flex;
-  position: absolute;
-  z-index: 1;
-}
-
-.nojs .user-list {
+.nojs .main-header .user-nav {
   margin-right: 0;
 }
