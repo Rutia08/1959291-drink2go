@@ -1,3 +1,38 @@
 .online-store {
+  padding: 20px;
   grid-column: 1/3;
+  border-top: 1px solid#f0Ebff;
+}
+
+.online-store__title {
+  @include zero-indent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #7859cf;
+  margin-bottom: 12px;
+}
+
+.online-store__list {
+  @include zero-indent;
+  list-style: none;
+}
+
+.online-store__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 8px;
+  }
+}
+
+.online-store__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333333;
 }

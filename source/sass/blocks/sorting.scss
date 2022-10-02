@@ -1,0 +1,31 @@
+.sorting {
+  display: flex;
+  flex-grow: 0;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sorting__title {
+  @include zero-indent;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.sorting__control {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #7859cf;
+  border: none;
+  background: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #f0ebff;
+    outline: none;
+  }
+}

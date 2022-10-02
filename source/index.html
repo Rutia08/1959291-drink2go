@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin>
   </head>
   <body class="page__body nojs">
     <header class="main-header">
@@ -204,8 +204,8 @@
         <div class="catalog__wrapper">
           <p class="catalog__description">Каталог</p>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
-          <section class="catalog__filter filter">
-            <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <section class="catalog__filter">
+            <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset  class="form__group">
                 <div class="form__group-wrapper">
                   <h3 class="form__group-title">Цена</h3>
@@ -221,14 +221,14 @@
                       </div>
                     </div>
                     <div class="range__wrapper">
-                      <div class="range__input">
+                      <div class="range__input-wrapper">
                         <label class="visually-hidden" for="min-price">от.</label>
-                        <input class="range__min" type="number" value="0" name="min-price" id="min-price">
+                        <input class="range__input range__input--min" type="number" name="min-price" id="min-price" placeholder="0" min="0">
                       </div>
-                      <span class ="range__divider">-</span>
-                      <div class="range__input">
+                      <span class ="range__divider"></span>
+                      <div class="range__input-wrapper">
                         <label class="visually-hidden" for="max-price">до.</label>
-                        <input class="range__max" type="number" value="900" name="max-price" id="max-price">
+                        <input class="range__input range__input--max" type="number" value="900" name="max-price" id="max-price" min="1">
                       </div>
                     </div>
                   </div>
@@ -236,7 +236,7 @@
               </fieldset>
               <fieldset class="form__group">
                 <div class="form__group-wrapper">
-                  <h3 class="form__group-title">Страна произрастания</h3>
+                  <h3 class="form__title">Страна произрастания</h3>
                   <ul class="form__list">
                     <li class="form__item">
                       <label class="form__label form__label--radio">
@@ -311,14 +311,14 @@
                   </ul>
               </div>
               </fieldset>
-              <div class="form__group">
+              <div class="form__group form__group--buttons">
                 <button class="form__button form__button--submit" type="submit">Применить фильтр</button>
                 <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
               </div>
             </form>
           </section>
           <section class="catalog__sorting sorting">
-            <h3 class="sorting__heading">Сортировка</h3>
+            <h3 class="sorting__title">Сортировка:</h3>
             <div class="sorting__select-wrapper">
               <select class="sorting__control" aria-label="Сортировка">
                 <option value="popular">по умолчанию</option>
@@ -349,11 +349,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
               <li class="products__card">
@@ -375,11 +376,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
               <li class="products__card">
@@ -401,11 +403,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
               <li class="products__card">
@@ -427,11 +430,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
               <li class="products__card">
@@ -453,11 +457,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
               <li class="products__card">
@@ -479,11 +484,12 @@
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products__purchase">
                   <span class="products__price">225₽</span>
-                  <a class="products__button" href="#">
+                  <button class="products__button" type="button">
                     <svg class="products__add-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 16" width="20" height="16">
                       <use href="img/sprite.svg#basket-add"></use>
                     </svg>
-                    В корзину</a>
+                    В корзину
+                  </button>
                 </div>
               </li>
             </ul>
@@ -491,20 +497,30 @@
           <section class="catalog__pagination pagination">
             <h3 class="visually-hidden">Пагинация.</h3>
             <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--previous"></a>
+              <li class="pagination__item pagination__item--previous">
+                <a class="pagination__link pagination__link--previous" href="">
+                  <span class="pagination__link-text">Назад</span>
+                  <svg class="pagination__link-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 10 10" width="10" height="10">
+                    <use href="img/sprite.svg#pagination"></use>
+                  </svg>
+                </a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#">1</a>
+                <a class="pagination__link" href="">1</a>
+              </li>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link pagination__link--current" href="">2</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link pagination__link--current" href="#">2</a>
+                <a class="pagination__link" href="">3</a>
               </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--next"></a>
+              <li class="pagination__item pagination__item--next">
+                <a class="pagination__link pagination__link--next" href="">
+                  <span class="pagination__link-text">Вперёд</span>
+                  <svg class="pagination__link-icon pagination__link-icon--next" aria-hidden="false" role="img" focusable="true" viewBox="0 0 10 10" width="10" height="10">
+                      <use href="img/sprite.svg#pagination"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
@@ -604,22 +620,26 @@
         </section>
         <section class="main-footer__contacts contacts">
           <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__icon">
-
+          <div class="contacts__address">
+            <svg class="contacts__icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
+              <use href="img/sprite.svg#address"></use>
+            </svg>
+            <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
           </div>
-          <p>Санкт-Петербург, набережная реки Карповки, дом 5</p>
-          <div class="contacts__icon">
-
+          <div class="contacts__phone">
+            <svg class="contacts__icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>
+            <a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </div>
-          <a class="contacts__phone" href="tel:+78121212">+7 (999) 999-99-99</a>
         </section>
-        <section class="main-footer__copyright">
-          <h2 class="visually-hidden">Copyright</h2>
-          <span>Разработано в</span>
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <section class="main-footer__copyright copyright">
+          <h2 class="visually-hidden">Copyright.</h2>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy.</span>
-            <svg class="main-footer__copyright-link main-footer__copyright-link--logo" aria-hidden="true" role="img" focusable="false" width="112" height="16" viewBox="0 0 112 16" xmlns="http://www.w3.org/2000/svg">
-              <use href="img/sprite.svg#academy"></use>
+            Разработано в HTML Academy
+            <svg class="copyright__icon" aria-hidden="true" role="img" focusable="false" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+              <use href="img/sprite.svg#html-academy"></use>
             </svg>
           </a>
         </section>
@@ -628,6 +648,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
-
   </body>
 </html>
