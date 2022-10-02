@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Интернет-магазин кофейных напитков.</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
@@ -202,8 +202,8 @@
       </section>
       <section class="catalog">
         <div class="catalog__wrapper">
-          <p class="filter__description">Каталог</p>
-          <h2 class="filter__title">Каталог кофейных напитков</h2>
+          <p class="catalog__description">Каталог</p>
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <section class="catalog__filter filter">
             <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset  class="form__group">
@@ -489,23 +489,24 @@
             </ul>
           </section>
           <section class="catalog__pagination pagination">
-          <ul class="pagination__list">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--previous"></a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--current" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--next"></a>
-            </li>
-          </ul>
+            <h3 class="visually-hidden">Пагинация.</h3>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--previous"></a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--current" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--next"></a>
+              </li>
+            </ul>
           </section>
         </div>
       </section>
@@ -626,7 +627,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
 
   </body>
 </html>
