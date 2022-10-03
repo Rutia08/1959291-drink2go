@@ -1,6 +1,25 @@
+.products {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+  }
+}
+
 .products__list {
   @include zero-indent;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 52px;
+    margin-bottom: 60px;
+  }
 }
 
 .products__card {
@@ -12,6 +31,21 @@
 
   &:last-child {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px 30px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(2) {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 

@@ -1,7 +1,18 @@
 .swiper {
   width: 280px;
   background-color: #f3ebe1;
-  padding: 20px 20px 60px 20px;
+  padding: 20px 20px 50px 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+
+    padding: 20px 20px 50px 20px;
+  }
 }
 
 .swiper__slide-number {
@@ -11,10 +22,34 @@
 .swiper-slide {
   display: block;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
 }
 
 .swiper__picture {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-bottom: 0;
+  }
+}
+
+.swiper__info {
+  @media (min-width: $desktop-width) {
+    padding: 150px 80px 10px 0;
+    text-align: left;
+  }
 }
 
 .swiper__text {
@@ -34,6 +69,13 @@
   letter-spacing: 0.02em;
   color: #333333;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 56px;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
 }
 
 .swiper__description {
@@ -43,11 +85,22 @@
   line-height: 20px;
   color: #333333;
   margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
 }
 
 .swiper__purchase {
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
 }
 
 .swiper__old-price {
@@ -65,7 +118,6 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #333333;
   margin-right: 20px;
 }
 
@@ -75,22 +127,40 @@
 }
 
 .swiper-button-next {
+  color: #7859cf;
   right: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
+    outline-offset: -2px;
   }
 
   &:active {
     background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
+
+  &:disabled {
+    color: #bdbdbd;
+  }
 }
 
 .swiper-button-prev {
+  color: #7859cf;
   left: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
+    outline-offset: -2px;
   }
 
   &:active {
@@ -107,6 +177,10 @@
   &:disabled {
     background: none;
     background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 80px;
   }
 }
 
@@ -130,6 +204,10 @@
   @media (min-width: $desktop-width) {
     display: block;
   }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 30px;
 }
 
 .swiper-pagination-bullet {

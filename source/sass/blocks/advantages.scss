@@ -16,9 +16,17 @@
   padding: 50px 20px 60px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 20px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
 }
 
-.advantages__description {
+.advantages__text {
   @include zero-indent;
   font-weight: 700;
   font-size: 12px;
@@ -30,51 +38,110 @@
   margin-bottom: 4px;
 }
 
-.advantages__title {
+.advantages__heading {
   @include zero-indent;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  color: #333333;
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .advantages__list {
   @include zero-indent;
   list-style: none;
-}
-
-.advantage {
-  @include zero-indent;
 
   &:not(:last-child) {
     margin-bottom: 32px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
-.advantage__logo {
+.advantages__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+
+.advantages__logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
-.advantage__title {
+.advantages__title {
   @include zero-indent;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   text-align: center;
-  color: #333333;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 72px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }
 
-.advantage__description {
+.advantages__description {
   @include zero-indent;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  color: #333333;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 72px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin: 0;
+  }
 }

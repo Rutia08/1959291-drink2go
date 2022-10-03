@@ -1,3 +1,11 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+}
+
 .form__group {
   @include zero-indent;
   border: none;
@@ -6,15 +14,51 @@
   &:last-child {
     margin-bottom: 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.form__title {
+.form__group-wrapper--range {
+  @media (min-width: $tablet-width) {
+    width: 220px;
+    margin-right: 21px;
+  }
+}
+
+.form__group-wrapper--milk {
+  @media (min-width: $tablet-width) {
+    max-width: 210px;
+    margin-right: 39px;
+  }
+}
+
+.form__group-wrapper--country {
+  @media (min-width: $tablet-width) {
+    max-width: 210px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.form__group-title {
   @include zero-indent;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #333333;
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__list {
@@ -192,6 +236,16 @@
   flex-direction: column;
   align-content: center;
   padding: 0 60px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .form__button {
@@ -207,6 +261,19 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 5px;
+  }
 }
 
 .form__button--submit:disabled {
@@ -218,9 +285,14 @@
   color: #7859cf;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #ffffff;
   }
+
+  &:focus-visible {
+    color: #333333;
+  }
+
 
   &:active {
     color: #ffffff;

@@ -2,21 +2,26 @@
   margin-right: 60px;
   grid-column: 2/3;
   grid-row: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    max-width: 120px;
+  }
 }
 
 .user-nav__list {
   @include zero-indent;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
 }
 
 .user-nav__item {
   @include zero-indent;
   display: flex;
 
-  &:hover {
-    background-color: #f0ebff;
+  &:focus-visible {
+    outline-color: #7859cf;
+    outline-offset: -2px;
   }
 
   &:active {
@@ -26,22 +31,39 @@
 
 .user-nav__navigation-link {
   @include zero-indent;
-  display: contents;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: #333333;
 
-  &:hover {
-    background-color: #f0ebff;
+  &:hover,
+  &:focus-visible {
+    color: #7859cf;
   }
 
-  &:active {
-    background-color: #f0ebff;
+  padding: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
   }
 }
 
 .user-nav__navigation-icon {
-  padding: 22px;
+  @media (min-width: $desktop-width) {
+    padding-right: 8px;
+  }
 }
 
 .user-nav__navigation-text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #333333;
+  }
 }

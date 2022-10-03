@@ -31,7 +31,7 @@
             <a class="site-nav__link site-nav__link--current" href="index.html">Главная</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Каталог продукции</a>
+            <a class="site-nav__link" href="#">Каталог</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="#">Доставка</a>
@@ -43,7 +43,7 @@
       </nav>
       <nav class="main-header__user-nav user-nav">
         <ul class="user-nav__list">
-          <li class="user-nav__item">
+          <li class="user-nav__item" tabindex="1">
             <a class="user-nav__navigation-link" href="#">
               <svg class="user-nav__navigation-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 16 16" width="16" height="16">
                 <use href="img/sprite.svg#user"></use>
@@ -51,7 +51,7 @@
               <span class="user-nav__navigation-text">Войти</span>
             </a>
           </li>
-          <li class="user-nav__item">
+          <li class="user-nav__item" tabindex="1">
             <a class="user-nav__navigation-link" href="#">
               <svg class="user-nav__navigation-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 16 16" width="16" height="16">
                 <use href="img/sprite.svg#basket"></use>
@@ -64,138 +64,140 @@
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
-      <section class="promo">
-        <div class="promo__slider swiper mySwiper">
-          <h2 class="visually-hidden">Наши новые предложения.</h2>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <span class ="swiper__slide-number">slide1</span>
-              <picture>
-                <!-- <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 1440px)"
-                  srcset="img/slider-1-desktop.png 1x, img/slider-1-desktop@2x.png 2x">
-                <!-- <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 768px)"
-                  srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x">
-                <!-- <source type="image/webp"
-                  srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x"> -->
-                <img class="swiper__picture" width="280" height="280" src="img/slider-1-mobile.png" srcset="img/slider-1-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
-              </picture>
+      <section class="swiper mySwiper">
+        <h2 class="visually-hidden">Наши новые предложения.</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <span class ="swiper__slide-number">slide1</span>
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="img/slider-1-desktop.png 1x, img/slider-1-desktop@2x.png 2x">
+              <!-- <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/slider-1-tablet.webp 1x, img/slider-1-tablet@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x">
+              <!-- <source type="image/webp"
+                srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x"> -->
+              <img class="swiper__picture" width="280" height="280" src="img/slider-1-mobile.png" srcset="img/slider-1-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+            </picture>
+            <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
               <h2 class="swiper__title">Декаф Флэт Уайт</h2>
               <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
               <div class="swiper__purchase">
                 <span class="swiper__old-price">295₽</span>
                 <span class="swiper__new-price">225₽</span>
-                <a class="swiper__button" href="#">Заказать</a>
+                <button class="swiper__button">Заказать</button>
               </div>
             </div>
-            <div class="swiper-slide">
-              <span class ="swiper__slide-number">slide2</span>
-              <picture>
-                <!-- <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider-2-desktop.webp 1x, img/slider-2-desktop@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 1440px)"
-                  srcset="img/slider-2-desktop.png 1x, img/slider-2-desktop@2x.png 2x">
-                <!-- <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 768px)"
-                  srcset="img/slider-2-tablet.png 1x, img/slider-2-tablet@2x.png 2x">
-                <!-- <source type="image/webp"
-                  srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x"> -->
-                <img class="swiper__picture" width="280" height="280" src="img/slider-2-mobile.png" srcset="img/slider-2-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
-              </picture>
+          </div>
+          <div class="swiper-slide">
+            <span class ="swiper__slide-number">slide2</span>
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/slider-2-desktop.webp 1x, img/slider-2-desktop@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="img/slider-2-desktop.png 1x, img/slider-2-desktop@2x.png 2x">
+              <!-- <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/slider-2-tablet.webp 1x, img/slider-2-tablet@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="img/slider-2-tablet.png 1x, img/slider-2-tablet@2x.png 2x">
+              <!-- <source type="image/webp"
+                srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x"> -->
+              <img class="swiper__picture" width="280" height="280" src="img/slider-2-mobile.png" srcset="img/slider-2-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+            </picture>
+            <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
               <h2 class="swiper__title">Лавандовый Латте</h2>
               <p class="swiper__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="swiper__purchase">
                 <span class="swiper__old-price">285₽</span>
                 <span class="swiper__new-price">265₽</span>
-                <a class="swiper__button" href="#">Заказать</a>
+                <button class="swiper__button">Заказать</button>
               </div>
             </div>
-            <div class="swiper-slide">
-              <span class ="swiper__slide-number">slide3</span>
-              <picture>
-                <!-- <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 1440px)"
-                  srcset="img/slider-3-desktop.png 1x, img/slider-3-desktop@2x.png 2x">
-                <!-- <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x"> -->
-                <source type="image/png" media="(min-width: 768px)"
-                  srcset="img/slider-3-tablet.png 1x, img/slider-3-tablet@2x.png 2x">
-                <!-- <source type="image/webp"
-                  srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x"> -->
-                <img class="swiper__picture" width="280" height="280" src="img/slider-3-mobile.png" srcset="img/slider-3-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
-              </picture>
+          </div>
+          <div class="swiper-slide">
+            <span class ="swiper__slide-number">slide3</span>
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/slider-1-desktop.webp 1x, img/slider-1-desktop@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="img/slider-3-desktop.png 1x, img/slider-3-desktop@2x.png 2x">
+              <!-- <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/slider-3-tablet.webp 1x, img/slider-3-tablet@2x.webp 2x"> -->
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="img/slider-3-tablet.png 1x, img/slider-3-tablet@2x.png 2x">
+              <!-- <source type="image/webp"
+                srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x"> -->
+              <img class="swiper__picture" width="280" height="280" src="img/slider-3-mobile.png" srcset="img/slider-3-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+            </picture>
+            <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
               <h2 class="swiper__title">Тройной Эспрессо</h2>
               <p class="swiper__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
               <div class="swiper__purchase">
                 <span class="swiper__old-price">395₽</span>
                 <span class="swiper__new-price">375₽</span>
-                <a class="swiper__button" href="#">Заказать</a>
+                <button class="swiper__button">Заказать</button>
               </div>
             </div>
           </div>
-          <div class="swiper-button-next">
-            <svg class="swiper-button-next__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
-              <use href="img/sprite.svg#swiper-next"></use>
-            </svg>
-          </div>
-          <div class="swiper-button-prev">
-            <svg class="swiper-button-prev__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
-              <use href="img/sprite.svg#swiper-prev"></use>
-            </svg>
-          </div>
-          <div class="swiper-pagination">
-
-          </div>
         </div>
+        <div class="swiper-button-next">
+          <svg class="swiper-button-next__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+            <use href="img/sprite.svg#swiper-next"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg class="swiper-button-prev__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+            <use href="img/sprite.svg#swiper-prev"></use>
+          </svg>
+        </div>
+        <div class="swiper-pagination"></div>
       </section>
       <section class="advantages">
         <div class="advantages__wrapper">
-          <p class="advantages__description">Преимущества</p>
-          <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+          <p class="advantages__text">Преимущества</p>
+          <h2 class="advantages__heading">Главные причины выбрать Drink2Go</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantage">
-              <div class="advantage__logo">
-                <svg class="advantage__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
+            <li class="advantages__item">
+              <div class="advantages__logo">
+                <svg class="advantages__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
                   <use href="img/sprite.svg#features-icon-1"></use>
                 </svg>
               </div>
-              <h3 class="advantage__title">Скорость</h3>
-              <p class="advantage__description">Готовый напиток всегда под рукой — просто открой банку</p>
+              <h3 class="advantages__title">Скорость</h3>
+              <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="advantages__item advantage">
-              <div class="advantage__logo">
-                <svg class="advantage__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
+              <div class="advantages__logo">
+                <svg class="advantages__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
                   <use href="img/sprite.svg#features-icon-2"></use>
                 </svg>
               </div>
-              <h3 class="advantage__title">Удобство</h3>
-              <p class="advantage__description">Легко помещается и в карман, и в маленькую сумочку</p>
+              <h3 class="advantages__title">Удобство</h3>
+              <p class="advantages__description">Легко помещается и в карман, и в маленькую сумочку</p>
             </li>
             <li class="advantages__item advantage">
-              <div class="advantage__logo">
-                <svg class="advantage__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
+              <div class="advantages__logo">
+                <svg class="advantages__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
                   <use href="img/sprite.svg#features-icon-3"></use>
                 </svg>
               </div>
-              <h3 class="advantage__title">Бодрость</h3>
-              <p class="advantage__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              <h3 class="advantages__title">Бодрость</h3>
+              <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="advantages__item advantage">
-              <div class="advantage__logo">
-                <svg class="advantage__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
+              <div class="advantages__logo">
+                <svg class="advantages__icon" aria-hidden="true" role="img" focusable="false" width="52" height="56">
                   <use href="img/sprite.svg#features-icon-4"></use>
                 </svg>
               </div>
-              <h3 class="advantage__title">Экологичность</h3>
-              <p class="advantage__description">Вся упаковка сделана из перерабатываемых материалов</p>
+              <h3 class="advantages__title">Экологичность</h3>
+              <p class="advantages__description">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -207,7 +209,7 @@
           <section class="catalog__filter">
             <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset  class="form__group">
-                <div class="form__group-wrapper">
+                <div class="form__group-wrapper form__group-wrapper--range">
                   <h3 class="form__group-title">Цена</h3>
                   <div class="form__group-range range">
                     <div class="range__scale">
@@ -235,8 +237,8 @@
                 </div>
               </fieldset>
               <fieldset class="form__group">
-                <div class="form__group-wrapper">
-                  <h3 class="form__title">Страна произрастания</h3>
+                <div class="form__group-wrapper form__group-wrapper--milk">
+                  <h3 class="form__group-title">Наличие молока</h3>
                   <ul class="form__list">
                     <li class="form__item">
                       <label class="form__label form__label--radio">
@@ -270,8 +272,8 @@
                 </div>
               </fieldset>
               <fieldset class="form__group">
-                <div class="form__group-wrapper">
-                  <h3 class="form__title">Страна происхождения</h3>
+                <div class="form__group-wrapper form__group-wrapper--country">
+                  <h3 class="form__group-title">Страна происхождения</h3>
                   <ul class="form__list form__list--checkbox-layout">
                     <li class="form__item">
                       <label class="form__label form__label--checkbox">
@@ -309,7 +311,7 @@
                       </label>
                     </li>
                   </ul>
-              </div>
+                </div>
               </fieldset>
               <div class="form__group form__group--buttons">
                 <button class="form__button form__button--submit" type="submit">Применить фильтр</button>
@@ -547,102 +549,102 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
-            <img class="main-footer__logo-img" src="img/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go.">
-          </picture>
-        </a>
-        <p class="main-footer__logo-text">Интернет-магазин кофейных напитков</p>
-        <section class="main-footer__social social">
-          <h2 class="visually-hidden">Социальные сети.</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">ВКонтакте.</span>
-                <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
-                  <use href="img/sprite.svg#vk"></use>
-                </svg>
-              </a>
+        <div class="main-footer__item main-footer__item--logo-social">
+          <div class="main-footer__logo">
+            <a class="main-footer__logo-link" href="index.html">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
+                <img class="main-footer__logo-img" src="img/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go.">
+              </picture>
+            </a>
+            <p class="main-footer__logo-text">Интернет-магазин кофейных напитков</p>
+          </div>
+          <div class="main-footer__social">
+            <h2 class="visually-hidden">Социальные сети.</h2>
+            <ul class="main-footer__list main-footer__list--social">
+              <li class="main-footer__list-item main-footer__list-item--social">
+                <a class="main-footer__link main-footer__link--social" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">ВКонтакте.</span>
+                  <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
+                    <use href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="main-footer__list-item main-footer__list-item--social">
+                <a class="main-footer__link main-footer__link--social" href="#">
+                  <span class="visually-hidden">Pinterest.</span>
+                  <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
+                    <use href="img/sprite.svg#pnt"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="main-footer__list-item main-footer__list-item--social">
+                <a class="main-footer__link main-footer__link--social" href="#">
+                  <span class="visually-hidden">OK.</span>
+                  <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
+                    <use href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-footer__item main-footer__item--online-store">
+          <h2 class="main-footer__item-title">Интернет-магазин</h2>
+          <ul class="main-footer__list">
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Каталог</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--yt" href="#">
-                <span class="visually-hidden">Pinterest.</span>
-                <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
-                  <use href="img/sprite.svg#pnt"></use>
-                </svg>
-              </a>
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Доставка</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--tg" href="#">
-                <span class="visually-hidden">OK.</span>
-                <svg aria-hidden="true" role="img" focusable="false" width="40" height="40">
-                  <use href="img/sprite.svg#ok"></use>
-                </svg>
-              </a>
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Способы оплаты</a>
+            </li>
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">О нас</a>
             </li>
           </ul>
-        </section>
-        <section class="main-footer__online-store online-store">
-          <h2 class="online-store__title">Интернет-магазин</h2>
-          <nav class="online-store__nav">
-            <ul class="online-store__list">
-              <li class="online-store__item">
-                <a class="online-store__link" href="#">Каталог</a>
-              </li>
-              <li class="online-store__item">
-                <a class="online-store__link" href="#">Доставка</a>
-              </li>
-              <li class="online-store__item">
-                <a class="online-store__link" href="#">Способы оплаты</a>
-              </li>
-              <li class="online-store__item">
-                <a class="online-store__link" href="#">О нас</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <section class="main-footer__media media">
-          <h2 class="media__title">Медиа</h2>
-          <nav class="media__nav">
-            <ul class="media__list">
-              <li class="media__item">
-                <a class="media__link" href="#">Блог</a>
-              </li>
-              <li class="media__item">
-                <a class="media__link" href="#">Информация для СМИ</a>
-              </li>
-              <li class="media__item">
-                <a class="media__link" href="#">Правовая информация</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <section class="main-footer__contacts contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__address">
-            <svg class="contacts__icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
+        </div>
+        <div class="main-footer__item main-footer__item--media">
+          <h2 class="main-footer__item-title">Медиа</h2>
+          <ul class="main-footer__list">
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Блог</a>
+            </li>
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Информация для СМИ</a>
+            </li>
+            <li class="main-footer__list-item">
+              <a class="main-footer__link" href="#">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__item main-footer__item--contacts">
+          <h2 class="main-footer__item-title">Контакты</h2>
+          <div class="main-footer__address">
+            <svg class="main-footer__address-icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
               <use href="img/sprite.svg#address"></use>
             </svg>
-            <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+            <p class="main-footer__address-text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
           </div>
-          <div class="contacts__phone">
-            <svg class="contacts__icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
+          <div class="main-footer__phone">
+            <svg class="main-footer__phone-icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
               <use href="img/sprite.svg#phone"></use>
             </svg>
-            <a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
+            <a class="main-footer__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </div>
-        </section>
-        <section class="main-footer__copyright copyright">
+        </div>
+        <div class="main-footer__item main-footer__item--copyright">
           <h2 class="visually-hidden">Copyright.</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="main-footer__link main-footer__link--copyright" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy.</span>
             Разработано в HTML Academy
-            <svg class="copyright__icon" aria-hidden="true" role="img" focusable="false" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="main-footer__copyright-icon" aria-hidden="true" role="img" focusable="false" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#html-academy"></use>
             </svg>
           </a>
-        </section>
+        </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

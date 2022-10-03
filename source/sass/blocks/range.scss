@@ -16,6 +16,10 @@
   &:disabled {
     background: #bdbdbd;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
 }
 
 .range__toggle {
@@ -54,6 +58,10 @@
 
 .range__toggle--max {
   left: 230px;
+
+  @media (min-width: $tablet-width) {
+    left: 150px;
+  }
 }
 
 .range__wrapper {
@@ -95,6 +103,10 @@
   &:invalid {
     color: #ff0000;
     border: 2px solid #ff0000;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
   }
 }
 
