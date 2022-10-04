@@ -1,4 +1,39 @@
+.map {
+  margin: 0 auto;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
 .map__wrapper {
   width: 100%;
   height: 420px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    height: 540px;
+  }
+}
+
+.map__picture {
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    height: 540px;
+  }
 }

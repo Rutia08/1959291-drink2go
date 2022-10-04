@@ -11,8 +11,8 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    right: 40px;
-    top: 210px;
+    right: 41px;
+    top: 224px;
   }
 }
 
@@ -23,9 +23,15 @@
   line-height: 24px;
   color: #333333;
   margin-right: 8px;
+  margin-left: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 }
 
 .sorting__control {
+  width: 165px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;

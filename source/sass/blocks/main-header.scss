@@ -32,11 +32,14 @@
 }
 
 .main-header__logo-img {
+  padding-top: 2px;
+
   @media (min-width: $tablet-width) {
     width: 82px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 1px;
     width: 170px;
     margin-right: 20px;
   }
@@ -53,5 +56,9 @@
     text-align: left;
     max-width: 130px;
     margin-right: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 154px;
   }
 }

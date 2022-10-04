@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body nojs">
     <header class="main-header">
@@ -85,7 +86,7 @@
             <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
               <h2 class="swiper__title">Декаф Флэт Уайт</h2>
-              <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
               <div class="swiper__purchase">
                 <span class="swiper__old-price">295₽</span>
                 <span class="swiper__new-price">225₽</span>
@@ -147,12 +148,12 @@
           </div>
         </div>
         <div class="swiper-button-next">
-          <svg class="swiper-button-next__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+          <svg class="swiper-button-next__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="20" height="20">
             <use href="img/sprite.svg#swiper-next"></use>
           </svg>
         </div>
         <div class="swiper-button-prev">
-          <svg class="swiper-button-prev__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="16" height="16">
+          <svg class="swiper-button-prev__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" width="20" height="20">
             <use href="img/sprite.svg#swiper-prev"></use>
           </svg>
         </div>
@@ -179,7 +180,7 @@
                 </svg>
               </div>
               <h3 class="advantages__title">Удобство</h3>
-              <p class="advantages__description">Легко помещается и в карман, и в маленькую сумочку</p>
+              <p class="advantages__description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
             </li>
             <li class="advantages__item advantage">
               <div class="advantages__logo">
@@ -188,7 +189,7 @@
                 </svg>
               </div>
               <h3 class="advantages__title">Бодрость</h3>
-              <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              <p class="advantages__description">Сбалансированная доза кофеина даст&nbsp; мощный заряд энергии</p>
             </li>
             <li class="advantages__item advantage">
               <div class="advantages__logo">
@@ -197,7 +198,7 @@
                 </svg>
               </div>
               <h3 class="advantages__title">Экологичность</h3>
-              <p class="advantages__description">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="advantages__description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -273,7 +274,7 @@
               </fieldset>
               <fieldset class="form__group">
                 <div class="form__group-wrapper form__group-wrapper--country">
-                  <h3 class="form__group-title">Страна происхождения</h3>
+                  <h3 class="form__group-title">Страна произрастания</h3>
                   <ul class="form__list form__list--checkbox-layout">
                     <li class="form__item">
                       <label class="form__label form__label--checkbox">
@@ -557,7 +558,7 @@
                 <img class="main-footer__logo-img" src="img/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go.">
               </picture>
             </a>
-            <p class="main-footer__logo-text">Интернет-магазин кофейных напитков</p>
+            <span class="main-footer__logo-text">Интернет-магазин кофейных напитков</span>
           </div>
           <div class="main-footer__social">
             <h2 class="visually-hidden">Социальные сети.</h2>
@@ -621,7 +622,7 @@
           </ul>
         </div>
         <div class="main-footer__item main-footer__item--contacts">
-          <h2 class="main-footer__item-title">Контакты</h2>
+          <h2 class="main-footer__item-title main-footer__item-title--contacts">Контакты</h2>
           <div class="main-footer__address">
             <svg class="main-footer__address-icon" aria-hidden="true" role="img" focusable="false" width="13" height="16">
               <use href="img/sprite.svg#address"></use>
@@ -637,10 +638,10 @@
         </div>
         <div class="main-footer__item main-footer__item--copyright">
           <h2 class="visually-hidden">Copyright.</h2>
+          <span class="main-footer__copyright-text">Разработано в</span>
           <a class="main-footer__link main-footer__link--copyright" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип HTML Academy.</span>
-            Разработано в HTML Academy
-            <svg class="main-footer__copyright-icon" aria-hidden="true" role="img" focusable="false" width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="main-footer__copyright-icon" aria-hidden="true" role="img" focusable="false" width="112" height="16" viewBox="0 0 112 16" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#html-academy"></use>
             </svg>
           </a>

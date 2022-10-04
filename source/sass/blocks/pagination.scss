@@ -57,13 +57,13 @@
   &:disabled {
     background-color: #e2e2e2;
   }
+}
 
+.pagination__link--previous,
+.pagination__link--next {
   @media (min-width: $tablet-width) {
-    &:first-child,
-    &:last-child {
-      width: auto;
-      padding: 8px 20px;
-    }
+    width: auto;
+    padding: 0 20px;
   }
 }
 

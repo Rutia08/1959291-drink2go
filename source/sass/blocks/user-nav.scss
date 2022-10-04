@@ -27,6 +27,12 @@
   &:active {
     background-color: #f0ebff;
   }
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
 }
 
 .user-nav__navigation-link {
@@ -35,13 +41,12 @@
   align-items: center;
   text-decoration: none;
   color: #333333;
+  padding: 22px;
 
   &:hover,
   &:focus-visible {
     color: #7859cf;
   }
-
-  padding: 22px;
 
   @media (min-width: $tablet-width) {
     padding: 32px 22px;

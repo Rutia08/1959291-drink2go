@@ -9,3 +9,7 @@
 .nojs .main-header .user-nav {
   margin-right: 0;
 }
+
+.nojs .main-header .user-nav__list {
+  justify-content: flex-end;
+}

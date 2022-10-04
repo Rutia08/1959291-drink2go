@@ -9,25 +9,37 @@
 .form__group {
   @include zero-indent;
   border: none;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 
   &:last-child {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 30px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+    flex-grow: 1;
+
+    &:last-child {
+      margin-top: 2px;
     }
   }
 }
 
 .form__group-wrapper--range {
   @media (min-width: $tablet-width) {
-    width: 220px;
     margin-right: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -44,7 +56,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 17px;
   }
 }
 
@@ -64,10 +76,15 @@
 .form__list {
   @include zero-indent;
   list-style: none;
+  margin-bottom: 5px;
 }
 
 .form__item:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__label {
@@ -95,6 +112,10 @@
 
 .form__label--checkbox {
   padding-left: 54px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 52px;
+  }
 }
 
 .form__input {
@@ -130,8 +151,6 @@
     display: block;
     background-color: #e2e2e2;
   }
-
-  // состояния чекбокс кнопки
 
   &:checked + .form__mark--checkbox {
     border-color: #7859cf;
@@ -207,7 +226,7 @@
 .form__mark--checkbox {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 2px;
   transform: translate(0, -50%);
   box-sizing: border-box;
   width: 42px;
@@ -236,21 +255,23 @@
   flex-direction: column;
   align-content: center;
   padding: 0 60px;
+  padding-top: 10px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-grow: 1;
-    justify-content: center;
+    margin-left: 119px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 0;
     padding: 0;
   }
 }
 
 .form__button {
   @include button;
-  padding: 15px 11px;
+  padding: 11px 14px;
   margin-bottom: 25px;
   font-weight: 400;
   font-size: 13px;
@@ -265,9 +286,14 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     font-size: 14px;
+    padding: 8px 4px;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 31px;
+
+      @media (min-width: $desktop-width) {
+        margin-right: 18px;
+      }
     }
   }
 
@@ -281,6 +307,7 @@
 }
 
 .form__button--reset {
+  font-size: 14px;
   background-color: #ffffff;
   color: #7859cf;
 
@@ -301,5 +328,9 @@
   &:disabled {
     color: #ffffff;
     background: #e2e2e2;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 11px;
   }
 }
