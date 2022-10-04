@@ -20,10 +20,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
     padding: 100px 40px 120px;
     display: grid;
     grid-template-columns: 318px 1fr;
+    grid-template-rows: auto auto 32px auto auto;
     column-gap: 30px;
   }
 }

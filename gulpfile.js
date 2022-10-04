@@ -1,13 +1,13 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
-// import postcss from 'gulp-postcss';
-// import autoprefixer from 'autoprefixer';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 // мои задачи
 import rename from 'gulp-rename';
 import svgstore from 'gulp-svgstore';
-// import csso from 'postcss-csso';
+import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
@@ -19,12 +19,12 @@ const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
   .pipe(plumber())
   .pipe(sass().on('error', sass.logError))
-  // .pipe(postcss([
-  // autoprefixer(),
-  // csso()
-  // ]))
+  .pipe(postcss([
+  autoprefixer(),
+  csso()
+  ]))
   .pipe(rename('style.min.css'))
-  .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+  .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
   .pipe(browser.stream());
 }
 
@@ -46,8 +46,7 @@ const scripts = () => {
 const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
-  'source/*.ico',
-  'source/*.webmanifest'
+  'source/*.ico'
   ], {
   base: 'source'
   })
@@ -103,7 +102,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -126,35 +125,36 @@ const watcher = () => {
 }
 
 // Default
-export default gulp.series(
-  // clean,
-  // copy,
-  // copyImages,
-  // gulp.parallel(
-  styles,
-  // html,
-  // scripts,
-  // svg,
-  sprite,
-  // webp
-  // ),
-  // gulp.series(
-  server,
-  watcher
-  // )
+export default
+gulp.series(
+    clean,
+    copy,
+    copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    webp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
 
 // Build
 export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
+    clean,
+    copy,
+    optimizeImages,
   gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  sprite,
-  webp
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    webp
   )
 );

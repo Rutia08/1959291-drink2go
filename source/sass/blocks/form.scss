@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     margin-bottom: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 3/5;
+  }
 }
 
 .form__group {

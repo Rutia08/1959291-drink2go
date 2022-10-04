@@ -10,9 +10,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    right: 41px;
-    top: 224px;
+    margin-bottom: 0;
+    align-items: flex-start;
   }
 }
 
@@ -41,7 +40,7 @@
   background: none;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     background-color: #f0ebff;
     outline: none;
   }
