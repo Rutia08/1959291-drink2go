@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 162px;
+    margin-left: 0;
   }
 }
 
@@ -32,13 +32,14 @@
     display: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #f0ebff;
   }
 
   &:focus-visible {
-    outline-color: #7859cf;
     outline-offset: -2px;
+    outline-color: #7859cf;
   }
 
   &:active {
@@ -144,8 +145,13 @@
   cursor: pointer;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+    outline-color: #7859cf;
   }
 
   &:active {

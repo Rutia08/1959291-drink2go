@@ -1,6 +1,7 @@
 .map {
   margin: 0 auto;
   width: $mobile-width;
+  background-color: #bdbdbd;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;

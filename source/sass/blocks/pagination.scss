@@ -12,7 +12,7 @@
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
-    justify-content: end;
+    justify-content: flex-end;
     padding: 0;
   }
 }
@@ -45,9 +45,13 @@
   text-decoration: none;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     background-color: #9070ec;
     color: #ffffff;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
   }
 
   &:active {
@@ -76,7 +80,7 @@
   cursor: default;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     background: none;
     color: #333333;
   }

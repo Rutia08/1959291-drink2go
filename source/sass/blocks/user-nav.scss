@@ -5,7 +5,6 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 0;
-    max-width: 120px;
   }
 }
 
@@ -13,14 +12,21 @@
   @include zero-indent;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .user-nav__item {
   @include zero-indent;
   display: flex;
 
-  &:focus-visible {
+  &:hover,
+  &:focus {
     outline-color: #7859cf;
+    outline-offset: -2px;
+  }
+
+  &:focus-visible {
     outline-offset: -2px;
   }
 
@@ -30,7 +36,7 @@
 
   @media (min-width: $desktop-width) {
     &:not(:last-child) {
-      margin-right: 16px;
+      margin-right: 20px;
     }
   }
 }
@@ -44,12 +50,25 @@
   padding: 22px;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+
+    .user-nav__navigation-text {
+      color: #7859cf;
+    }
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+    outline-color: #7859cf;
   }
 
   @media (min-width: $tablet-width) {
     padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 20px;
   }
 }
 

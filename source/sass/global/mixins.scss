@@ -20,11 +20,12 @@
 // кнопка
 @mixin button {
   @include zero-indent;
-  font-family: inherit;
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  font-family: inherit;
   text-transform: none;
   text-decoration: none;
   word-wrap: break-word;
@@ -34,8 +35,13 @@
   border-radius: 4px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #9070ec;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
   }
 
   &:active {

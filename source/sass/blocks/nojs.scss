@@ -13,3 +13,27 @@
 .nojs .main-header .user-nav__list {
   justify-content: flex-end;
 }
+
+.nojs .swiper {
+  @media (min-width: $tablet-width) {
+    background: #f3ebe1;
+  }
+}
+
+.nojs .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nojs .swiper-button-next,
+.nojs .swiper-button-prev {
+  display: none;
+}
+
+.nojs .sorting-js {
+  display: none;
+}
+
+.nojs .sorting {
+  display: flex;
+}

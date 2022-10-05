@@ -1,0 +1,120 @@
+.sorting-js {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-bottom: 24px;
+    margin-right: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    align-items: flex-start;
+    margin-right: 5px;
+  }
+}
+
+.sorting-js__title {
+  @include zero-indent;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-right: 8px;
+  margin-left: 3px;
+}
+
+.sorting-js__toggle {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px 27px 4px 10px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.sorting-js__text {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #7859cf;
+}
+
+.sorting-js__icon {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateX(50%);
+  width: 10px;
+  height: 10px;
+  border: none;
+  rotate: -90deg;
+  color: #7859cf;
+}
+
+.sorting-js--opened .sorting-js__icon {
+  rotate: 90deg;
+  transform: translateX(-50%);
+}
+
+.sorting-js__list {
+  @include zero-indent;
+  display: none;
+}
+
+.sorting-js--opened .sorting-js_list {
+  display: flex;
+  position: absolute;
+  top: 32px;
+  max-width: 190px;
+  list-style: none;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.sorting-js__option {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  padding: 8px 20px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #f0ebff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+  }
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.sorting-js__option--current {
+  color: #ffffff;
+  background-color: #7859cf;
+}

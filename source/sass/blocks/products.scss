@@ -67,6 +67,10 @@
 .products__text-link {
   margin-bottom: 4px;
   text-decoration: none;
+
+  &:focus-visible {
+    outline-color: #7859cf;
+  }
 }
 
 .products__name {
@@ -75,6 +79,15 @@
   font-size: 18px;
   line-height: 32px;
   color: #333333;
+
+  &:hover,
+  &:focus {
+    color: #7859cf;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -108,6 +121,7 @@
   color: #333333;
   padding-top: 2px;
   margin-left: -2px;
+  padding-right: 5px;
 }
 
 .products__button {

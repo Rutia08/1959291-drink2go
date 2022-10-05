@@ -135,6 +135,8 @@
   color: #7859cf;
   margin-right: 6px;
   padding-top: 4px;
+  word-wrap: break-word;
+  max-width: 80px;
 }
 
 .swiper__new-price {
@@ -144,8 +146,10 @@
   line-height: 32px;
   margin-right: 20px;
   padding-top: 4px;
+  word-wrap: break-word;
+  max-width: 80px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     margin-right: 22px;
   }
 }
@@ -155,6 +159,12 @@
   font-size: 16px;
   line-height: 24px;
   padding: 8px 20px;
+  word-wrap: break-word;
+  max-width: 120px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 180px;
+  }
 }
 
 .swiper-button-next {
@@ -167,8 +177,8 @@
   }
 
   &:focus-visible {
-    outline-color: #7859cf;
     outline-offset: -2px;
+    outline-color: #7859cf;
   }
 
   &:active {
@@ -190,8 +200,8 @@
   }
 
   &:focus-visible {
-    outline-color: #7859cf;
     outline-offset: -2px;
+    outline-color: #7859cf;
   }
 
   &:active {
@@ -208,6 +218,11 @@
   &:disabled {
     background: none;
     background-color: #ffffff;
+
+    .swiper-button-prev__icon,
+    .swiper-button-next__icon {
+      color: #bdbdbd;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -229,10 +244,6 @@
 .swiper-button-prev__icon,
 .swiper-button-next__icon {
   color: #7859cf;
-
-  &:disabled {
-    color: #bdbdbd;
-  }
 }
 
 .swiper-pagination {
@@ -256,14 +267,18 @@
   opacity: 1;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   &:hover,
-  &:focus-visible {
+  &:focus {
     background-color: rgba(120, 89, 207, 0.25);
   }
 }

@@ -27,7 +27,8 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    padding: 38px 40px;
+    row-gap: 12px;
+    padding: 39px 40px;
   }
 }
 
@@ -44,6 +45,10 @@
     padding: 0;
     margin-top: 0;
     border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -62,6 +67,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
+    margin-bottom: 0;
   }
 }
 
@@ -76,6 +82,12 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
     margin-right: 0;
+  }
+}
+
+.main-footer__logo-link {
+  &:focus-visible {
+    outline-color: #7859cf;
   }
 }
 
@@ -114,15 +126,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 13px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/-1;
-    padding-top: 10px;
+    padding-top: 2px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -149,6 +162,14 @@
 
 .main-footer__item-title--contacts {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .main-footer__list {
@@ -161,7 +182,7 @@
 }
 
 .main-footer__list-item {
-  padding: 8px 0;
+  // padding: 8px 0;
 
   &:not(:last-child) {
     margin-bottom: 4px;
@@ -178,6 +199,7 @@
 }
 
 .main-footer__link {
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -185,10 +207,15 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #333333;
+  padding: 8px 0;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
   }
 
   &:active {
@@ -220,8 +247,12 @@
 
 .main-footer__phone-link {
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
   }
 
   &:active {
@@ -234,15 +265,23 @@
 }
 
 .main-footer__link--social {
+  padding: 0;
+  border-radius: 4px;
   color: #bdbdbd;
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+    background-color: #f0ebff;
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
   }
 
   &:active {
     color: #593cac;
+    background-color: rgba(120, 89, 207, 0.25);
   }
 }
 
@@ -260,8 +299,12 @@
   }
 
   &:hover,
-  &:focus-visible {
+  &:focus {
     color: #7859cf;
+  }
+
+  &:focus-visible {
+    outline-color: #7859cf;
   }
 
   &:active {

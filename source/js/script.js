@@ -3,15 +3,22 @@ let navSite = document.querySelector('.site-nav');
 let navToggle = document.querySelector('.site-nav__toggle');
 let allInputs = document.querySelectorAll('.form__input');
 let mapPicture = document.querySelector('.map__picture');
+let selectToggle = document.querySelector('.sorting-js__toggle');
+let selectList= document.querySelector('.sorting-js');
 
 page.classList.remove('nojs');
 
+// site-nav
 navToggle.onclick = function() {
   navSite.classList.toggle('site-nav--opened');
 };
 
-// слайдер
+// select
+selectToggle.onclick = function() {
+  selectList.classList.toggle('sorting-js--opened');
+};
 
+// slider
 var swiper = new Swiper(".mySwiper", {
   cssMode: true,
   loop: true,
@@ -34,7 +41,7 @@ for (let i = 0; i < allInputs.length; i++) {
   }
 }
 
-// карта
+// map
 mapPicture.classList.add('visually-hidden');
 
 const map = L.map('map-wrapper')

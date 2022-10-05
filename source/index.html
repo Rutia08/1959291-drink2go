@@ -15,14 +15,20 @@
   </head>
   <body class="page__body nojs">
     <header class="main-header">
-      <a class="main-header__logo">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="main-header__logo-img" src="img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
-        </picture>
-      </a>
-      <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
+      <div class="main-header__logo">
+        <a class="main-header__logo-link">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-header__logo-img"
+              src="img/logo-mobile.svg"
+              width="32"
+              height="36"
+              alt="Логотип Drink2Go.">
+          </picture>
+        </a>
+        <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
+      </div>
       <nav class="main-header__site-nav site-nav">
         <button class="site-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -44,7 +50,7 @@
       </nav>
       <nav class="main-header__user-nav user-nav">
         <ul class="user-nav__list">
-          <li class="user-nav__item" tabindex="1">
+          <li class="user-nav__item" >
             <a class="user-nav__navigation-link" href="#">
               <svg class="user-nav__navigation-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 16 16" width="16" height="16">
                 <use href="img/sprite.svg#user"></use>
@@ -52,7 +58,7 @@
               <span class="user-nav__navigation-text">Войти</span>
             </a>
           </li>
-          <li class="user-nav__item" tabindex="1">
+          <li class="user-nav__item">
             <a class="user-nav__navigation-link" href="#">
               <svg class="user-nav__navigation-icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 16 16" width="16" height="16">
                 <use href="img/sprite.svg#basket"></use>
@@ -81,7 +87,12 @@
                 srcset="img/slider-1-tablet.png 1x, img/slider-1-tablet@2x.png 2x">
               <source type="image/webp"
                 srcset="img/slider-1-mobile.webp 1x, img/slider-1-mobile@2x.webp 2x">
-              <img class="swiper__picture" width="280" height="280" src="img/slider-1-mobile.png" srcset="img/slider-1-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              <img class="swiper__picture"
+                width="280"
+                height="280"
+                src="img/slider-1-mobile.png"
+                srcset="img/slider-1-mobile@2x.png 2x"
+                alt="Напиток Декаф Флэт Уайт.">
             </picture>
             <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
@@ -107,7 +118,12 @@
                 srcset="img/slider-2-tablet.png 1x, img/slider-2-tablet@2x.png 2x">
               <source type="image/webp"
                 srcset="img/slider-2-mobile.webp 1x, img/slider-2-mobile@2x.webp 2x">
-              <img class="swiper__picture" width="280" height="280" src="img/slider-2-mobile.png" srcset="img/slider-2-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              <img class="swiper__picture"
+                width="280"
+                height="280"
+                src="img/slider-2-mobile.png"
+                srcset="img/slider-2-mobile@2x.png 2x"
+                alt="Напиток Декаф Флэт Уайт.">
             </picture>
             <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
@@ -133,7 +149,12 @@
                 srcset="img/slider-3-tablet.png 1x, img/slider-3-tablet@2x.png 2x">
               <source type="image/webp"
                 srcset="img/slider-3-mobile.webp 1x, img/slider-3-mobile@2x.webp 2x">
-              <img class="swiper__picture" width="280" height="280" src="img/slider-3-mobile.png" srcset="img/slider-3-mobile@2x.png 2x" alt="Напиток Декаф Флэт Уайт.">
+              <img class="swiper__picture"
+                width="280"
+                height="280"
+                src="img/slider-3-mobile.png"
+                srcset="img/slider-3-mobile@2x.png 2x"
+                alt="Напиток Декаф Флэт Уайт.">
             </picture>
             <div class="swiper__info">
               <p class="swiper__text">Новинка!</p>
@@ -189,7 +210,7 @@
                 </svg>
               </div>
               <h3 class="advantages__title">Бодрость</h3>
-              <p class="advantages__description">Сбалансированная доза кофеина даст&nbsp; мощный заряд энергии</p>
+              <p class="advantages__description">Сбалансированная доза кофеина даст&nbsp;мощный заряд энергии</p>
             </li>
             <li class="advantages__item advantage">
               <div class="advantages__logo">
@@ -207,7 +228,7 @@
         <div class="catalog__wrapper">
           <p class="catalog__description">Каталог</p>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
-          <section class="catalog__filter">
+          <div class="catalog__filter">
             <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset  class="form__group">
                 <div class="form__group-wrapper form__group-wrapper--range">
@@ -319,22 +340,37 @@
                 <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
               </div>
             </form>
-          </section>
-          <section class="catalog__sorting sorting">
+          </div>
+          <div class="catalog__sorting sorting">
             <h3 class="sorting__title">Сортировка:</h3>
             <div class="sorting__select-wrapper">
               <select class="sorting__control" aria-label="Сортировка">
-                <option class="test1" value="popular">по умолчанию</option>
+                <option value="default">по умолчанию</option>
                 <option value="cheap">сначала дешёвые</option>
                 <option value="expensive">сначала дорогие</option>
-                <option value="popular">сначала популярные</option>
+                <option value="popular">высокий рейтинг</option>
               </select>
             </div>
-          </section>
-          <section class="catalog__products products">
+          </div>
+          <div class="catalog__sorting sorting-js">
+            <h3 class="sorting-js__title">Сортировка:</h3>
+            <div class="sorting-js__toggle">
+              <span class="sorting-js__text">по умолчанию</span>
+              <svg class="sorting-js__icon" aria-hidden="true" role="img" focusable="false" viewBox="0 0 10 10" width="10" height="10">
+                <use href="img/sprite.svg#pagination"></use>
+              </svg>
+            </div>
+            <ul class="sorting-js__list">
+              <li class="sorting-js__option sorting-js__option--current">по умолчанию</li>
+              <li class="sorting-js__option">сначала дешёвые</li>
+              <li class="sorting-js__option">сначала дорогие</li>
+              <li class="sorting-js__option">высокий рейтинг</li>
+            </ul>
+          </div>
+          <div class="catalog__products products">
             <ul class="products__list">
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x">
@@ -343,10 +379,10 @@
                       height="188"
                       src="img/coffee-can-1.png"
                       srcset="img/coffee-can-1@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
-                <a href="#" class="products__text-link">
+                <a class="products__text-link" href="#">
                   <h3 class="products__name">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -361,7 +397,7 @@
                 </div>
               </li>
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x">
@@ -370,10 +406,10 @@
                       height="188"
                       src="img/coffee-can-2.png"
                       srcset="img/coffee-can-2@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
-                <a href="#" class="products__text-link">
+                <a class="products__text-link" href="#">
                   <h3 class="products__name">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -388,7 +424,7 @@
                 </div>
               </li>
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x">
@@ -397,10 +433,10 @@
                       height="188"
                       src="img/coffee-can-3.png"
                       srcset="img/coffee-can-3@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
-                <a href="#" class="products__text-link">
+                <a class="products__text-link" href="#">
                   <h3 class="products__name">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -415,7 +451,7 @@
                 </div>
               </li>
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x">
@@ -424,10 +460,10 @@
                       height="188"
                       src="img/coffee-can-4.png"
                       srcset="img/coffee-can-4@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
-                <a href="#" class="products__text-link">
+                <a class="products__text-link" href="#">
                   <h3 class="products__name">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -442,7 +478,7 @@
                 </div>
               </li>
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x">
@@ -451,10 +487,10 @@
                       height="188"
                       src="img/coffee-can-5.png"
                       srcset="img/coffee-can-5@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
-                <a href="#" class="products__text-link">
+                <a class="products__text-link" href="#" >
                   <h3 class="products__name">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="products__info">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -469,7 +505,7 @@
                 </div>
               </li>
               <li class="products__card">
-                <a href="#" class="products__picture-link">
+                <a class="products__picture-link" href="#" tabindex="-1">
                   <picture>
                     <source type="image/webp"
                       srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x">
@@ -478,7 +514,7 @@
                       height="188"
                       src="img/coffee-can-6.png"
                       srcset="img/coffee-can-6@2x.png 2x"
-                      alt="Декаф Флэт Уайт">
+                      alt="Декаф Флэт Уайт.">
                   </picture>
                 </a>
                 <a href="#" class="products__text-link">
@@ -496,8 +532,8 @@
                 </div>
               </li>
             </ul>
-          </section>
-          <section class="catalog__pagination pagination">
+          </div>
+          <div class="catalog__pagination pagination">
             <h3 class="visually-hidden">Пагинация.</h3>
             <ul class="pagination__list">
               <li class="pagination__item pagination__item--previous">
@@ -512,13 +548,13 @@
                 <a class="pagination__link" href="">1</a>
               </li>
               <li class="pagination__item pagination__item--current">
-                <a class="pagination__link pagination__link--current" href="">2</a>
+                <a class="pagination__link pagination__link--current" tabindex="-1" href="#">2</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="">3</a>
               </li>
               <li class="pagination__item pagination__item--next">
-                <a class="pagination__link pagination__link--next" href="">
+                <a class="pagination__link pagination__link--next" href="#">
                   <span class="pagination__link-text">Вперёд</span>
                   <svg class="pagination__link-icon pagination__link-icon--next" aria-hidden="false" role="img" focusable="true" viewBox="0 0 10 10" width="10" height="10">
                       <use href="img/sprite.svg#pagination"></use>
@@ -526,7 +562,7 @@
                 </a>
               </li>
             </ul>
-          </section>
+          </div>
         </div>
       </section>
       <section class="map">
@@ -543,7 +579,12 @@
               srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
             <source type="image/webp"
               srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-            <img class="map__picture" width="320" height="420" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Карта - как нас найти.">
+            <img class="map__picture"
+              width="320"
+              height="420"
+              src="img/map-mobile.png"
+              srcset="img/map-mobile@2x.png 2x"
+              alt="Карта - как нас найти.">
           </picture>
         </div>
       </section>
@@ -555,7 +596,11 @@
             <a class="main-footer__logo-link" href="index.html">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
-                <img class="main-footer__logo-img" src="img/logo-tablet.svg" width="82" height="36" alt="Логотип Drink2Go.">
+                <img class="main-footer__logo-img"
+                src="img/logo-tablet.svg"
+                width="82"
+                height="36"
+                alt="Логотип Drink2Go.">
               </picture>
             </a>
             <span class="main-footer__logo-text">Интернет-магазин кофейных напитков</span>
