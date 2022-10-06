@@ -13,7 +13,7 @@
 .form__group {
   @include zero-indent;
   border: none;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 
   &:last-child {
     margin-bottom: 38px;
@@ -70,7 +70,7 @@
   font-size: 16px;
   line-height: 24px;
   color: #333333;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
@@ -305,10 +305,6 @@
   @media (min-width: $desktop-width) {
     padding: 8px 5px;
   }
-}
-
-.form__button--submit:disabled {
-  background: #bdbdbd;
 }
 
 .form__button--reset {

@@ -127,16 +127,16 @@ const watcher = () => {
 // Default
 export default
 gulp.series(
-    // clean,
-    // copy,
-    // copyImages,
+    clean,
+    copy,
+    copyImages,
   gulp.parallel(
     styles,
     html,
     scripts,
-    // svg,
-    // sprite,
-    // webp
+    svg,
+    sprite,
+    webp
   ),
   gulp.series(
     server,

@@ -36,14 +36,12 @@
 
 .main-header__logo-img {
   display: block;
-  padding-top: 2px;
 
   @media (min-width: $tablet-width) {
     width: 82px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 1px;
     width: 170px;
     margin-right: 20px;
   }
@@ -53,7 +51,7 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    padding-top: 5px;
+    padding-top: 2px;
     display: flex;
     font-size: 12px;
     line-height: 16px;
