@@ -54,13 +54,6 @@ const copy = (done) => {
   done();
 }
 
-// копирование картинок
-const copyImages = (done) => {
-  gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(gulp.dest('build/img'))
-  done();
-}
-
 // оптимизация картинок
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
@@ -126,10 +119,10 @@ const watcher = () => {
 
 // Default
 export default
-gulp.series(
+  gulp.series(
     clean,
     copy,
-    copyImages,
+    optimizeImages,
   gulp.parallel(
     styles,
     html,
