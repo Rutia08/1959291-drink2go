@@ -13,6 +13,14 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import del from 'del';
+// gh-pages
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src("./build/**/*")
+    .pipe(deploy())
+});
 
 // Styles
 const styles = () => {
