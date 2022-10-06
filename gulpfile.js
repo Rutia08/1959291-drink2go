@@ -14,6 +14,15 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import del from 'del';
 
+// gh-pages
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src("./build/**/*")
+    .pipe(deploy())
+});
+
 // Styles
 const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
