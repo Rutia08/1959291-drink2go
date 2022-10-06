@@ -24,7 +24,7 @@ const styles = () => {
   csso()
   ]))
   .pipe(rename('style.min.css'))
-  .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+  .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
   .pipe(browser.stream());
 }
 
@@ -46,22 +46,13 @@ const scripts = () => {
 const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
-  'source/*.ico',
-  'source/*.webmanifest'
+  'source/*.ico'
   ], {
   base: 'source'
   })
   .pipe(gulp.dest('build'))
   done();
 }
-
-// копирование картинок
-const copyImages = (done) => {
-  gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(gulp.dest('build/img'))
-  done();
-}
-
 
 // оптимизация картинок
 const optimizeImages = () => {
@@ -104,7 +95,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -127,35 +118,36 @@ const watcher = () => {
 }
 
 // Default
-export default gulp.series(
-  // clean,
-  // copy,
-  // copyImages,
-  // gulp.parallel(
-  styles,
-  // html,
-  // scripts,
-  // svg,
-  // sprite,
-  // webp
-  // ),
-  // gulp.series(
-  server,
-  watcher
-  // )
+export default
+  gulp.series(
+    clean,
+    copy,
+    optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    webp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
 
 // Build
 export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
+    clean,
+    copy,
+    optimizeImages,
   gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svg,
-  sprite,
-  webp
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    webp
   )
 );

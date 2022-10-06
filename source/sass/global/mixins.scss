@@ -1,0 +1,54 @@
+// нулевые отступы
+@mixin zero-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+// кнопка
+@mixin button {
+  @include zero-indent;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  text-transform: none;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: #ffffff;
+  background-color: #7859cf;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
+}
